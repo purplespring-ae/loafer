@@ -27,7 +27,29 @@ class Formula():
 
 def window():
     app = QApplication(sys.argv)
-    wrapper = QBoxLayout()
+    wrapper = QWidget()
+
+    formula_input = QFormLayout()
+    # Hydration
+    lbl_hyd = QLabel()
+    lbl_hyd.setText("Hydration:")
+    txt_hyd = QLineEdit()
+    formula_input.addWidget(lbl_hyd)
+    formula_input.addWidget(txt_hyd)
+    # Levain
+    lbl_lev = QLabel()
+    lbl_lev.setText("Levain:")
+    txt_lev = QLineEdit()
+    formula_input.addWidget(lbl_lev)
+    formula_input.addWidget(txt_lev)
+    # Salt
+    lbl_sal = QLabel()
+    lbl_sal.setText("Salt:")
+    txt_sal = QLineEdit()
+    formula_input.addWidget(lbl_sal)
+    formula_input.addWidget(txt_sal)
+
+    wrapper.setLayout(formula_input)
 
     wrapper.show()
 
@@ -37,4 +59,4 @@ def window():
 if __name__ == "__main__":
     my_formula = Formula("Low Hydration Basic", 0.65, 0.2, 0.02)
     my_formula.math(350)
-    # window()
+    window()

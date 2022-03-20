@@ -7,5 +7,5 @@
 ### Planned Features
 
 - Calculate bake timings from start time or end time
-- Record baker's math formulas
-- Save notes for bakes
+- Record baker's math formulas using JSON
+- Save notes for bakes using JSON
